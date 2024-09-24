@@ -43,11 +43,15 @@ class BookFormType extends AbstractType
                 'required' => false,
             ])
 
-             ->add('imagePath', FileType::class, array(
+            ->add('imagePath', FileType::class, [
                 'label' => false,
                 'required' => false,
-                'mapped' => false
-            ))
+                'mapped' => false,
+                'attr' => [
+                    'class' => 'p-4', 
+                ],
+            ])
+            
 
             //->add('authors', EntityType::class, [
               //  'class' => Author::class,
